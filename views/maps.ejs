@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UMD Detour Map</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" >
+</head>
+<body>
+  <h1>UMD Detour Map</h1>
+  <div id="map" style="height: 600px;"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    const map = L.map('map').setView([38.9869, -76.9426], 16); 
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19
+    }).addTo(map);
+
+    const sites = <%- JSON.stringify(sites) %>;
+
+    sites.forEach(site => {
+      if(site.latitude && site.longitude) {
+        L.marker([site.latitude, site.longitude])
+          .addTo(map)
+          .bindPopup(`<b>${site.location}</b><br>${site.detour}`);
+      }
+    });
+   
+  </script>
+</body>
+</html>

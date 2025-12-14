@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>UMD Buildings</h1>
+  <a href="/">Back to HomePage</a>
+
+  <ul>
+    <% buildings.slice(0, 20).forEach(b => { %>
+      <li>
+        <strong><%= b.name %></strong><br>
+        Code: <%= b.code %>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>

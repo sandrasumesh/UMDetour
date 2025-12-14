@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+ <div class="top">
+  <div class="top-left">
+    <h1>UMDetour</h1>
+    <p>Navigate campus construction with ease.</p>
+  </div>
+
+  <div class="top-right">
+    <img src="/umd.jpg" alt="University of Maryland Campus">
+  </div>
+</div>
+
+  <div class="bottom">
+    <a class="add-link" href="/new">Submit Construction</a> |
+    <a href="/buildings">View UMD Buildings (API)</a> |
+    <a href="/maps">View Current Detours</a> 
+
+
+   <div class="site-card">
+  <% sites.forEach(site => { %>
+    <div class="card">
+      <% if (site.imageUrl) { %>
+        <img src="<%= site.imageUrl %>" alt="Construction site">
+      <% } %>
+
+      <div class="card-text">
+        <strong><%= site.location %></strong><br>
+        <%= site.description %><br>
+        <em>Detour:</em> <%= site.detour %>
+      </div>
+    </div>
+  <% }) %>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "umdetour",
+  "version": "1.0.0",
+  "description": "UMD Detour – construction updates and detour map for UMD campus",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "Sandra Sumesh",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^5.2.1",
+    "mongoose": "^9.0.1",
+    "node-fetch": "^3.3.2"
+  }
+}

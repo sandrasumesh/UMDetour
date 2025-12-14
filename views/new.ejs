@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <div class="top top-column">
+    <h1>Notify UMDetour of a Construction Site</h1>
+<p>Please make sure to check if this specific construction zone has already been updated in the app before submitting.</p>
+  </div>
+
+  <div class="bottom">
+    <form method="POST" action="/new" class="form-card">
+      <input name="location" placeholder="Location" required><br>
+      <input name="description" placeholder="Description" required><br>
+      <input name="detour" placeholder="Suggested Detour"><br>
+      <input name="imageUrl" placeholder="Image URL (optional)"><br>
+      <button type="submit">Submit</button>
+    </form>
+    <br>
+    <a href="/">Back to Homepage</a>
+  </div>
+
+</body>
+</html>
