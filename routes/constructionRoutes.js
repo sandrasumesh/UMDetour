@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Construction = require('../models/Construction');
+const Construction = require('../models/construction');
 
 router.get('/', async (req, res) => {
   const sites = await Construction.find();
